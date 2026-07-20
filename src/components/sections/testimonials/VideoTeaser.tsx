@@ -1,6 +1,6 @@
 import { Play } from 'lucide-react'
 import { useRef, useState } from 'react'
-import testimonialsVideo from '@/assets/testimonies.mp4'
+import { MEDIA } from '@/lib/media'
 
 export function VideoTeaser() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -16,7 +16,7 @@ export function VideoTeaser() {
       <video
         ref={videoRef}
         className="absolute inset-0 h-full w-full object-cover"
-        src={testimonialsVideo}
+        src={MEDIA.testimonialsVideo}
         controls={isPlaying}
         playsInline
         preload="metadata"

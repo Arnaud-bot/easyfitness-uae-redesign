@@ -1,6 +1,4 @@
-import communityVideo from '@/assets/community.mp4'
-import gymTourVideo from '@/assets/gym-tour.mp4'
-import transformationVideo from '@/assets/transformation.mp4'
+import { MEDIA } from '@/lib/media'
 
 export interface RealResultVideo {
   video: string
@@ -10,17 +8,17 @@ export interface RealResultVideo {
 
 export const REAL_RESULT_VIDEOS: RealResultVideo[] = [
   {
-    video: transformationVideo,
+    video: MEDIA.transformationVideo,
     title: 'Real Transformations',
     description: 'Members who put in the work — and the results to show for it.',
   },
   {
-    video: gymTourVideo,
+    video: MEDIA.gymTourVideo,
     title: 'Our Facility',
     description: 'A full tour of the equipment, studios, and recovery suite.',
   },
   {
-    video: communityVideo,
+    video: MEDIA.communityVideo,
     title: 'The Community',
     description: 'High energy, zero judgment — see what training here feels like.',
   },

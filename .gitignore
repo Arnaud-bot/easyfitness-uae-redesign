@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Large media hosted on Vercel Blob — see src/lib/media.ts
+src/assets/*.mp4
+src/assets/*.mov
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
