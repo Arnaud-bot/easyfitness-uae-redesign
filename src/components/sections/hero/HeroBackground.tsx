@@ -1,0 +1,33 @@
+import heroVideo from '@/assets/hero1.mp4'
+
+const GRAIN_TEXTURE =
+  "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")"
+
+export function HeroBackground() {
+  return (
+    <div className="hero-bg absolute inset-0 overflow-hidden bg-black">
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        src={heroVideo}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        aria-hidden="true"
+      />
+
+      {/* Uniform darken so white text stays legible over the footage */}
+      <div className="absolute inset-0 bg-black/45" />
+
+      {/* Bottom scrim — the CTA/stats block always sits on a solid dark backdrop */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+
+      {/* Subtle film grain for a cinematic texture */}
+      <div
+        className="absolute inset-0 opacity-[0.05] mix-blend-overlay"
+        style={{ backgroundImage: GRAIN_TEXTURE }}
+      />
+    </div>
+  )
+}

@@ -1,0 +1,69 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  /* Brand palette — primary black, secondary white, lime green accent.
+     "accent" is a darker, legible shade used for text/icons/borders.
+     "accent-fill" is the true bright brand lime, reserved for solid
+     button/badge backgrounds — always paired with black text for contrast. */
+  --color-black: #0a0a0a;
+  --color-white: #ffffff;
+  --color-accent: #7a9420;
+  --color-accent-fill: #bfd730;
+  --color-accent-fill-dark: #8fa321;
+  /* Reserved for form validation errors — kept separate from the green
+     brand accent so "invalid" never visually reads as "valid". */
+  --color-error: #dc2626;
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f4f4f5;
+  --color-gray-200: #e4e4e7;
+  --color-gray-400: #9a9aa0;
+  --color-gray-600: #52525b;
+  --color-gray-800: #27272a;
+
+  /* Typographic hierarchy: display, hero, h1-h3, body, caption */
+  --text-display: clamp(2.75rem, 2rem + 3vw, 6.5rem);
+  --text-display--line-height: 1.02;
+  --text-display--letter-spacing: -0.03em;
+
+  --text-hero: clamp(2.25rem, 1.75rem + 2vw, 4.5rem);
+  --text-hero--line-height: 1.08;
+  --text-hero--letter-spacing: -0.02em;
+
+  --text-h1: clamp(2rem, 1.6rem + 1.5vw, 3rem);
+  --text-h1--line-height: 1.1;
+  --text-h1--letter-spacing: -0.02em;
+
+  --text-h2: clamp(1.5rem, 1.3rem + 1vw, 2.25rem);
+  --text-h2--line-height: 1.15;
+  --text-h2--letter-spacing: -0.01em;
+
+  --text-h3: 1.5rem;
+  --text-h3--line-height: 1.3;
+
+  --text-body-lg: 1.125rem;
+  --text-body-lg--line-height: 1.6;
+
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.4;
+  --text-caption--letter-spacing: 0.06em;
+
+  /* Soft, premium shadows only */
+  --shadow-soft: 0 2px 8px rgba(10, 10, 10, 0.04), 0 8px 24px rgba(10, 10, 10, 0.06);
+  --shadow-soft-lg: 0 4px 16px rgba(10, 10, 10, 0.06), 0 16px 48px rgba(10, 10, 10, 0.08);
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+
+  body {
+    @apply bg-white text-black font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-black text-white;
+  }
+}
