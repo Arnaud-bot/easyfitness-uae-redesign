@@ -12,7 +12,7 @@ export function VideoTeaser() {
   }
 
   return (
-    <div className="relative aspect-video w-full overflow-hidden rounded-3xl bg-black">
+    <div className="relative mx-auto aspect-[9/16] w-full max-w-xs overflow-hidden rounded-3xl bg-black sm:aspect-video sm:max-w-none">
       <video
         ref={videoRef}
         className="absolute inset-0 h-full w-full object-cover"
