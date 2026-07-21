@@ -1,4 +1,4 @@
-const BLOB_BASE_URL = 'https://2rrp2bupetql8xix.public.blob.vercel-storage.com'
+export const BLOB_BASE_URL = 'https://2rrp2bupetql8xix.public.blob.vercel-storage.com'
 
 // Large video assets are hosted on Vercel Blob rather than bundled through
 // the app — Vercel's build doesn't resolve Git LFS pointers, and shipping

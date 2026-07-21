@@ -3,6 +3,7 @@ import { FeatureCard } from '@/components/ui/FeatureCard'
 import { Heading } from '@/components/ui/Heading'
 import { Section } from '@/components/ui/Section'
 import { FEATURES } from '@/data/features'
+import { PhotoGallery } from './why/PhotoGallery'
 
 const FEATURE_COLUMNS = 3
 const FEATURE_STAGGER_DELAY = 0.08
@@ -27,6 +28,8 @@ export function WhyEasyFitness() {
             />
           ))}
         </div>
+
+        <PhotoGallery />
       </Container>
     </Section>
   )
