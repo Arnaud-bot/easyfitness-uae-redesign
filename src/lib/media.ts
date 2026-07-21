@@ -9,4 +9,5 @@ export const MEDIA = {
   transformationVideo: `${BLOB_BASE_URL}/transformation.mp4`,
   gymTourVideo: `${BLOB_BASE_URL}/gym-tour.mp4`,
   communityVideo: `${BLOB_BASE_URL}/community.mp4`,
+  recoveryVideo: `${BLOB_BASE_URL}/recovery.MP4`,
 } as const
